@@ -1,0 +1,24 @@
+# permissions for end users to edit pings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: ping-editor-role
+rules:
+- apiGroups:
+  - demo.mikevasylchenko
+  resources:
+  - pings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - demo.mikevasylchenko
+  resources:
+  - pings/status
+  verbs:
+  - get

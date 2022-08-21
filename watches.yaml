@@ -1,0 +1,6 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: demo.mikevasylchenko
+  version: v1alpha1
+  kind: Ping
+  chart: helm-charts/ping
+#+kubebuilder:scaffold:watch

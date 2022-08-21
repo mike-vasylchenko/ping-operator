@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ping-app-config
+data:
+  config.cfg: |-
+    [config]
+    hosts = {{ .Values.config.hosts }}
+    calls_per_minute = {{ .Values.config.calls_per_minute }}
